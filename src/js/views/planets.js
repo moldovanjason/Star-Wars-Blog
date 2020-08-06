@@ -1,41 +1,33 @@
 import React from "react";
-import { Navbar } from "../components/navBar";
 import { Card } from "../components/card";
 
 //create your first component
-export class Home extends React.Component {
+export class Planets extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			char: [],
 			planets: []
 		};
 	}
 
 	componentDidMount() {
-		fetch("https://swapi.dev/api/people/")
+		fetch("https://swapi.dev/api/planets/")
 			.then(response => response.json())
-			.then(characters => this.setState({ char: characters.results }));
+			.then(planet => this.setState({ planets: planet.results }))
+			.catch(err => console.log(err));
 	}
 
 	render() {
-		var charCards = null;
-		if (this.state.char.length > 1) {
-			charCards = this.state.char.map((character, cardIndex) => {
-				return <Card key={cardIndex} character={character} />;
+		console.log(this.state.planets);
+		var planetCards = null;
+		if (this.state.planets.length > 1) {
+			planetCards = this.state.planets.map((planet, cardIndex) => {
+				return <Card key={cardIndex} name={planet.name} />;
 			});
 		} else {
-			console.log("loading...");
+			// console.log("loading...");
 		}
 
-		return (
-			<div className="container-fluid">
-				<Navbar />
-
-				<div className="heading" />
-				<div className="navBar">B</div>
-				<div className="cards">{charCards}</div>
-			</div>
-		);
+		return <div className="cards">{planetCards}</div>;
 	}
 }

@@ -7,7 +7,7 @@ export const Card = props => {
 		<div className="card" key={props.keyIndex} style={{ width: "18rem" }}>
 			<img src="..." className="card-img-top" alt="..." />
 			<div className="card-body">
-				<p className="card-text">{props.character.name}</p>
+				<p className="card-text">{props.name}</p>
 				<p />
 				<p />
 				<p />
@@ -17,6 +17,6 @@ export const Card = props => {
 };
 
 Card.propTypes = {
-	character: PropTypes.object,
+	name: PropTypes.string,
 	keyIndex: PropTypes.number
 };
