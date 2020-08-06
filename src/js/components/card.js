@@ -8,6 +8,9 @@ export const Card = props => {
 			<img src="..." className="card-img-top" alt="..." />
 			<div className="card-body">
 				<p className="card-text">{props.character.name}</p>
+				<p />
+				<p />
+				<p />
 			</div>
 		</div>
 	);
