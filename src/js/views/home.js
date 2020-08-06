@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "../components/navBar";
-import Card from "../components/card"
+import { Navbar } from "../components/navBar";
+import { Card } from "../components/card";
 
 //create your first component
 export class Home extends React.Component {
@@ -12,9 +12,9 @@ export class Home extends React.Component {
 	render() {
 		return (
 			<div className="container-fluid">
-				<./ navBar />
-				<card />
-				<div className="heading">A</div>
+				<Navbar />
+				<Card />
+				<div className="heading" />
 				<div className="navBar">B</div>
 				<div className="cards">C</div>
 			</div>

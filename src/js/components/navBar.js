@@ -1,24 +1,42 @@
 import React from "react";
 
-
 //create your first component
 export const Navbar = () => {
-    return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </div>
-            </div>
-        </nav>
-    );
-    
-}
-
+	return (
+		<div>
+			<nav className="navbar navbar-dark">
+				<a className="navbar-brand" href="#">
+					<ul className="logo">
+						<li>
+							<i className="fab fa-facebook-square" />
+						</li>
+						<li>
+							<i className="fab fa-youtube" />
+						</li>
+						<li>
+							<i className="fab fa-instagram" />
+						</li>
+						<li>
+							<i className="fab fa-twitter" />
+						</li>
+						<li>
+							<i className="fab fa-tumblr" />
+						</li>
+					</ul>
+				</a>
+				<img
+					className="img"
+					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Star_Wars_Logo_2.svg/1024px-Star_Wars_Logo_2.svg.png"
+				/>
+				<form className="form-inline my-2 my-lg-0">
+					<input
+						className="form-control mr-sm-2"
+						type="search"
+						placeholder="Search Star Wars"
+						aria-label="Search"
+					/>
+				</form>
+			</nav>
+		</div>
+	);
+};

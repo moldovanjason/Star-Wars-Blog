@@ -1,16 +1,33 @@
-
 @import "~bootstrap/scss/bootstrap.scss";
 
 
 
-.heading{
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Star_Wars_Logo_2.svg/1024px-Star_Wars_Logo_2.svg.png);
-    object-fit: none;
-    height:500px;
+.img{
+    height:60px;
+    width:100px
     
+
 }
 
 
+.navbar{
+    width:100%;
+    margin:0;
+    background:black;
+    color:white !important;
+}
+
+
+.logo li{
+    display:inline;
+    margin-left:6px;
+}
+
+
+.logo{
+    padding:0px;
+    margin:0px;
+}
 
 
 
