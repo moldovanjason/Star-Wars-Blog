@@ -18,19 +18,30 @@ export class Home extends React.Component {
 	}
 
 	render() {
-		var charCards = null;
-		if (this.state.char.length > 1) {
-			charCards = this.state.char.map((character, cardIndex) => {
-				return <Card key={cardIndex} name={character.name} />;
-			});
-		} else {
-			// console.log("loading...");
-		}
+		// var charCards = null;
+		// if (this.state.char.length > 1) {
+		// 	charCards = this.state.char.map((character, cardIndex) => {
+		// 		return <Card key={cardIndex} name={character.name} />;
+		// 	});
+		// } else {
+		// 	// console.log("loading...");
+		// }
 
 		return (
 			<div className="container-fluid">
 				<Navbar />
-				<div className="cards">{charCards}</div>
+				<div className="charCards">
+					{this.state.char.length > 1 ? (
+						this.state.char.map((character, cardIndex) => {
+							return (
+								<Card key={cardIndex} name={character.name} />
+							);
+						})
+					) : (
+						<h1>Loading...</h1>
+					)}
+					;
+				</div>
 				<Planets />
 			</div>
 		);

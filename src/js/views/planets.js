@@ -28,6 +28,6 @@ export class Planets extends React.Component {
 			// console.log("loading...");
 		}
 
-		return <div className="cards">{planetCards}</div>;
+		return <div className="planetCards">{planetCards}</div>;
 	}
 }
